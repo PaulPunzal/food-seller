@@ -7,11 +7,11 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 
 const authRoutes = require('./routes/auth.routes');
-const menuRoutes = require('./src/routes/menu.routes');
-const customerRoutes = require('./src/routes/customer.routes');
-const messageRoutes = require('./src/routes/message.routes');
-const analyticsRoutes = require('./src/routes/analytics.routes');
-const { errorHandler } = require('./src/middleware/errorHandler');
+const menuRoutes = require('./routes/menu.routes');
+const customerRoutes = require('./routes/customer.routes');
+const messageRoutes = require('./routes/message.routes');
+const analyticsRoutes = require('./routes/analytics.routes');
+const { errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
