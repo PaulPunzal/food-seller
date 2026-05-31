@@ -1,13 +1,18 @@
+// backend/src/routes/customer.routes.js
+// Replace the existing file with this one after adding the controller.
 const { Router } = require('express');
 const { requireAuth } = require('../middleware/auth');
+const {
+  list, getOne, create, update, remove,
+} = require('../controllers/customer.controller');
 
 const router = Router();
 router.use(requireAuth);
 
-router.get('/', (_req, res) => res.json({ message: 'TODO: list customers' }));
-router.post('/', (_req, res) => res.status(201).json({ message: 'TODO: create customer' }));
-router.get('/:id', (_req, res) => res.json({ message: 'TODO: get customer' }));
-router.put('/:id', (_req, res) => res.json({ message: 'TODO: update customer' }));
-router.delete('/:id', (_req, res) => res.json({ message: 'TODO: delete customer' }));
+router.get('/',       list);
+router.post('/',      create);
+router.get('/:id',    getOne);
+router.put('/:id',    update);
+router.delete('/:id', remove);
 
 module.exports = router;
