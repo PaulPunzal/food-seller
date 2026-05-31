@@ -1,4 +1,4 @@
-const menuModel = require('../models/menu.model');
+const menuModel = require('../model/menu.model');
 const cloudinary = require('../config/cloudinary');
 
 /** GET /api/menus */

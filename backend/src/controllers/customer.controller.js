@@ -1,4 +1,4 @@
-const customerModel = require('../models/customer.model');
+const customerModel = require('../model/customer.model');
 const { customerSchema, validate } = require('../utils/validators');
 
 /** GET /api/customers */
